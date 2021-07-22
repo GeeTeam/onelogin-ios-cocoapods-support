@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setDelegate:(nullable id<OneLoginDelegate>)delegate;
 
 /**
- 设置请求超时时长。默认时长5s。
+ 设置请求超时时长。默认时长8s。
 
  @param timeout 超时时长
  */
@@ -170,14 +170,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)requestTokenWithViewController:(nullable UIViewController *)viewController
                              viewModel:(nullable OLAuthViewModel *)viewModel
                             completion:(void(^)(NSDictionary * _Nullable result))completion;
-
-/**
- 进行用户认证授权, 获取网关 token 。
- 
- @param completion 结果处理回调
- 
- */
-+ (void)requestTokenWithCompletion:(void(^)(NSDictionary * _Nullable result))completion;
 
 /**
  @abstract 关闭当前的授权页面

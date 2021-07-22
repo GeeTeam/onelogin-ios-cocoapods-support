@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)hasRegistered;
 
 /**
- 设置请求超时时长。默认时长5s。
+ 设置请求超时时长。默认时长8s。
 
  @param timeout 超时时长
  */
@@ -108,7 +108,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)requestTokenWithViewController:(nullable UIViewController *)viewController
                              viewModel:(nullable OLAuthViewModel *)viewModel
                             completion:(void(^)(NSDictionary * _Nullable result))completion;
-+ (void)requestTokenWithCompletion:(void(^)(NSDictionary * _Nullable result))completion;
 
 /**
  * @abstract 重新预取号

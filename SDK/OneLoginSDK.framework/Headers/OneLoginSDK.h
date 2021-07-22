@@ -15,10 +15,10 @@ FOUNDATION_EXPORT double OneLoginSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char OneLoginSDKVersionString[];
 
 #import <OneLoginSDK/OneLogin.h>
+#import <OneLoginSDK/OneLoginPro.h>
 #import <OneLoginSDK/OLAuthViewModel.h>
 #import <OneLoginSDK/OLNetworkInfo.h>
 #import <OneLoginSDK/OLPrivacyTermItem.h>
-#import <OneLoginSDK/OneLoginPro.h>
 #import <OneLoginSDK/OLErrorInfo.h>
 #import <OneLoginSDK/GTOnePass.h>
 #import <OneLoginSDK/OLAgreementView.h>

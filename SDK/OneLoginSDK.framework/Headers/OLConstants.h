@@ -72,7 +72,7 @@ static NSString * const OLAuthcodeKey          = @"authcode";
 static NSString * const OLExpireTimeKey        = @"expire_time";
 static NSString * const OLPreGetTokenSuccessedTimeKey = @"preGetTokenSuccessedTime";
 
-static NSString * const OLSDKVersion           = @"2.4.1";
+static NSString * const OLSDKVersion           = @"2.5.0";
 
 static NSString * const OLFirstRegister        = @"f_r_o";
 
@@ -102,7 +102,7 @@ static NSString * const OLRightQuotationMark   = @"》";
 
 static NSString * const OLTokenSeperator = @"__";
 
-static NSTimeInterval const OLDefaultTimeout   = 5.0;
+static NSTimeInterval const OLDefaultTimeout   = 8.0;
 
 static NSTimeInterval const OLMinTimeInterval  = 0.7;
 
