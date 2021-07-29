@@ -367,7 +367,7 @@ typedef NS_ENUM(NSInteger, OLPullAuthVCStyle) {
 #pragma mark - CheckBox & Privacy Terms/隐私条款勾选框及隐私条款
 
 /**
- 授权页面上条款勾选框初始状态。默认 YES。
+ 授权页面上条款勾选框初始状态。默认 NO。
  */
 @property (nonatomic, assign) BOOL defaultCheckBoxState;
 
