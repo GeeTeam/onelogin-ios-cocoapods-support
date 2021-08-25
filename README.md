@@ -10,7 +10,7 @@ order: 0
 
 |版本|更新内容|更新日期|下载地址|
 | --------- |------------------------------------------------------------|--------- | -------- |
-| **2.5.2.1** | 1.更新中国移动 SDK 5.8.3.1 <br> <font color="#ff0000">Tips：</br>1.8.0（不含）以下版本升级到该版本，服务端接口必须一同调整，否则会导致电信取号失败</br>2.3.0 及以下版本升级到该版本，请注意移动 SDK 的名称由 `TYRZSDK.framework` 改为了 `TYRZUISDK.framework` | 2021-08-25 |[点击下载](https://docs.geetest.com/downloads/onelogin&onepass-ios.zip)
+| **2.5.2.1** | 1.更新中国移动 SDK 5.8.3.1 <br>  <font color="#ff0000">Tips：</br>1.8.0（不含）以下版本升级到该版本，服务端接口必须一同调整，否则会导致电信取号失败</br>2.3.0 及以下版本升级到该版本，请注意移动 SDK 的名称由 `TYRZSDK.framework` 改为了 `TYRZUISDK.framework` | 2021-08-25 |[点击下载](https://docs.geetest.com/downloads/onelogin&onepass-ios.zip)
 
 # 更新日志
 
