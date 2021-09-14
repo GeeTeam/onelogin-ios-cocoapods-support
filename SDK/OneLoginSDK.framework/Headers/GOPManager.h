@@ -103,6 +103,13 @@ typedef void(^GOPFailure)(NSError *error);
 + (void)setCachePhoneEnabled:(BOOL)enabled;
 
 /**
+ * @abstract 设置是否私有化测试
+ *
+ * @param privatization YES，私有化设置  NO，非私有化设置
+ */
++ (void)setPrivatization:(const bool)privatization;
+
+/**
  @abstract 获取缓存的手机号
  
  @return 手机号

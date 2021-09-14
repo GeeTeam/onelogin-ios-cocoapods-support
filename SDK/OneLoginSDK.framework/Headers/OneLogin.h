@@ -167,7 +167,7 @@ NS_ASSUME_NONNULL_BEGIN
  @seealso OLAuthViewModel
  
  */
-+ (void)requestTokenWithViewController:(nullable UIViewController *)viewController
++ (void)requestTokenWithViewController:(UIViewController *)viewController
                              viewModel:(nullable OLAuthViewModel *)viewModel
                             completion:(void(^)(NSDictionary * _Nullable result))completion;
 

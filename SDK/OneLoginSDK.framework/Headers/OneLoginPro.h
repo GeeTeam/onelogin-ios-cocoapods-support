@@ -74,9 +74,9 @@ NS_ASSUME_NONNULL_BEGIN
    "operatorType" : "CU",
    "release" : "13.5.1",
    "processID" : "967ceb230b3fdfb4d74ebcb470c5830c",
-   "appID" : "b41a959b5cac4dd1277183e074630945",
+   "appID" : "e4fcb3086ca25bbe2da08a09d75c70e8",
    "pre_token_time" : "1012",
-   "token" : "CU__0__b41a959b5cac4dd1277183e074630945__2.3.8.2__1__f632d01ab7c64efda96580c3274de971__NOTCUCC",
+   "token" : "CU__0__e4fcb3086ca25bbe2da08a09d75c70e8__2.3.8.2__1__f632d01ab7c64efda96580c3274de971__NOTCUCC",
    "number" : "186****6173",
    "preGetTokenSuccessedTime" : 1604890895.807291,
    "errorCode" : "0",
@@ -89,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
  {
    "status" : 500,
    "operatorType" : "CU",
-   "appID" : "b41a959b5cac4dd1277183e074630945",
+   "appID" : "e4fcb3086ca25bbe2da08a09d75c70e8",
    "model" : "iPhone9,1",
    "release" : "13.5.1",
    "msg" : "Can't access cellular.",
@@ -105,7 +105,7 @@ NS_ASSUME_NONNULL_BEGIN
  errorCode - 获取失败时的错误码
  msg - 获取失败时表示失败原因
  */
-+ (void)requestTokenWithViewController:(nullable UIViewController *)viewController
++ (void)requestTokenWithViewController:(UIViewController *)viewController
                              viewModel:(nullable OLAuthViewModel *)viewModel
                             completion:(void(^)(NSDictionary * _Nullable result))completion;
 
@@ -129,7 +129,7 @@ NS_ASSUME_NONNULL_BEGIN
    "operatorType" : "CU",
    "release" : "13.5.1",
    "processID" : "1f1437fd0b3026ff44500c3d03cdd822",
-   "appID" : "b41a959b5cac4dd1277183e074630945",
+   "appID" : "e4fcb3086ca25bbe2da08a09d75c70e8",
    "pre_token_time" : "1087",
    "number" : "186****6173",
    "preGetTokenSuccessedTime" : 1604890389.0020308,
@@ -142,7 +142,7 @@ NS_ASSUME_NONNULL_BEGIN
  {
    "status" : 500,
    "operatorType" : "CU",
-   "appID" : "b41a959b5cac4dd1277183e074630945",
+   "appID" : "e4fcb3086ca25bbe2da08a09d75c70e8",
    "model" : "iPhone9,1",
    "release" : "13.5.1",
    "msg" : "Can't access cellular.",
