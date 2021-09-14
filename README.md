@@ -4,18 +4,32 @@ type: iOS资源下载
 order: 0
 ---
 
-# iOS最新版本
+# 获取方式
+
+```
+# 以下两种版本选择方式示例 2.4.0版本以后
+
+# 集成最新版极验 SDK:
+pod 'OneLoginSDK-iOS'
+
+# 集成指定版本极验 SDK，具体版本号可先执行 pod search OneLoginSDK-iOS，根据返回的版本信息自行指定版本
+pod 'OneLoginSDK-iOS', '~> 2.4.0'
+```
+
+# 更新说明
+## iOS 最新版本
 
 下载的 SDK 为 OneLogin 和 OnePass 的整合 SDK
 
 |版本|更新内容|更新日期|下载地址|
 | --------- |------------------------------------------------------------|--------- | -------- |
-| **2.5.2.1** | 1.更新中国移动 SDK 5.8.3.1 <br>  <font color="#ff0000">Tips：</br>1.8.0（不含）以下版本升级到该版本，服务端接口必须一同调整，否则会导致电信取号失败</br>2.3.0 及以下版本升级到该版本，请注意移动 SDK 的名称由 `TYRZSDK.framework` 改为了 `TYRZUISDK.framework` | 2021-08-25 |[点击下载](https://docs.geetest.com/downloads/onelogin&onepass-ios.zip)
+| **2.5.3** | 1. 移除 performSelector: 的使用 <br> 2. 其他问题修复 <font color="#ff0000">Tips：</br>1.8.0（不含）以下版本升级到该版本，服务端接口必须一同调整，否则会导致电信取号失败</br>2.3.0 及以下版本升级到该版本，请注意移动 SDK 的名称由 `TYRZSDK.framework` 改为了 `TYRZUISDK.framework` | 2021-09-13 |[点击下载](https://docs.geetest.com/downloads/onelogin&onepass-ios.zip)
 
-# 更新日志
+## 更新日志
 
 版本|更新内容|更新日期
 -----|-----|-----
+**2.5.2.1** | 1.更新中国移动 SDK 5.8.3.1 <br>  <font color="#ff0000">Tips：</br>1.8.0（不含）以下版本升级到该版本，服务端接口必须一同调整，否则会导致电信取号失败</br>2.3.0 及以下版本升级到该版本，请注意移动 SDK 的名称由 `TYRZSDK.framework` 改为了 `TYRZUISDK.framework` | 2021-08-25
 **2.5.2** | 1.增大授权页隐私条款复选框 CheckBox 的响应区域 <br> 2.其他优化更新 <br> <font color="#ff0000">Tips：</br>1.8.0（不含）以下版本升级到该版本，服务端接口必须一同调整，否则会导致电信取号失败</br>2.3.0 及以下版本升级到该版本，请注意移动 SDK 的名称由 `TYRZSDK.framework` 改为了 `TYRZUISDK.framework` | 2021-08-19 
 **2.5.1** | 1.授权页隐私条款默认不勾选 <br> <font color="#ff0000">Tips：</br>1.8.0（不含）以下版本升级到该版本，服务端接口必须一同调整，否则会导致电信取号失败</br>2.3.0 及以下版本升级到该版本，请注意移动 SDK 的名称由 `TYRZSDK.framework` 改为了 `TYRZUISDK.framework` | 2021-07-29 
 **2.5.0** | 1.更新联通运营商SDK解决现有bug并兼容IPV6; <br> 2.更新电信运营商SDK解决现有bug; <br> 3.增加授权页面黑暗模式支持; <br> 4.其它更新优化; <br> <font color="#ff0000">Tips：</br>1.8.0（不含）以下版本升级到该版本，服务端接口必须一同调整，否则会导致电信取号失败</br>2.3.0 及以下版本升级到该版本，请注意移动 SDK 的名称由 `TYRZSDK.framework` 改为了 `TYRZUISDK.framework` | 2021-07-22
