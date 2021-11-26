@@ -71,6 +71,9 @@ static NSString * const OLErrorCode_20409 = @"-20409";  // 电信 SDK EAccountAp
 static NSString * const OLErrorCode_20410 = @"-20410";  // 未获取到 key window
 static NSString * const OLErrorDesc_20410 = @"Key window is nil.";
 
+static NSString * const OLErrorCode_20420 = @"-20420";  // 获取的 token 缺失
+static NSString * const OLErrorDesc_20420 = @"Missing token result.";
+
 static NSString * const OLErrorCode_20490 = @"-20490";  // 未获取到present认证页面控制器的vc
 static NSString * const OLErrorDesc_20490 = @"ViewController can't be nil";
 
