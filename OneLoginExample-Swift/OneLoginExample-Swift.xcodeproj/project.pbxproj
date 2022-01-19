@@ -37,6 +37,7 @@
 		E94C05AD2513074F005AE547 /* GTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E94C05A02513074F005AE547 /* GTProgressHUD.m */; };
 		E94C05B125130A57005AE547 /* OnePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C05B025130A57005AE547 /* OnePassViewController.swift */; };
 		E94C05B325130A5C005AE547 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C05B225130A5C005AE547 /* ResultViewController.swift */; };
+		E9A2D57A2797FB2400002EA3 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A2D5792797FB2400002EA3 /* Network.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		E94C05AF25130798005AE547 /* OneLoginExample-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneLoginExample-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		E94C05B025130A57005AE547 /* OnePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePassViewController.swift; sourceTree = "<group>"; };
 		E94C05B225130A5C005AE547 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		E9A2D5792797FB2400002EA3 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A2D57A2797FB2400002EA3 /* Network.framework in Frameworks */,
 				E94C0576251305D9005AE547 /* TYRZUISDK.framework in Frameworks */,
 				E94C0575251305D9005AE547 /* OneLoginSDK.framework in Frameworks */,
 				E94C057A251305D9005AE547 /* EAccountApiSDK.framework in Frameworks */,
@@ -169,6 +172,7 @@
 		E94C0568251305BA005AE547 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9A2D5792797FB2400002EA3 /* Network.framework */,
 				E94C056B251305C2005AE547 /* libz.1.2.8.tbd */,
 				E94C0569251305BA005AE547 /* libc++.1.tbd */,
 			);

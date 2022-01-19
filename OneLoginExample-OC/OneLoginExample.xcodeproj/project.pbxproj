@@ -45,6 +45,7 @@
 		E992F78325BE72BA0040AD0C /* account_login_sdk_noui_core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E992F78025BE72BA0040AD0C /* account_login_sdk_noui_core.framework */; };
 		E992F78425BE72BB0040AD0C /* EAccountApiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E992F78125BE72BA0040AD0C /* EAccountApiSDK.framework */; };
 		E992F78525BE72BB0040AD0C /* TYRZUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E992F78225BE72BA0040AD0C /* TYRZUISDK.framework */; };
+		E9A2D5782797FB0900002EA3 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A2D5772797FB0900002EA3 /* Network.framework */; };
 		E9E778502302CAFE002D91D1 /* OneLoginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E7784A2302CAFE002D91D1 /* OneLoginSDK.framework */; };
 		E9E778532302CAFE002D91D1 /* OneLoginResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9E7784D2302CAFE002D91D1 /* OneLoginResource.bundle */; };
 		E9F06ABA25133D000017EB76 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F06AB725133D000017EB76 /* BaseViewController.m */; };
@@ -122,6 +123,7 @@
 		E992F78025BE72BA0040AD0C /* account_login_sdk_noui_core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = account_login_sdk_noui_core.framework; sourceTree = "<group>"; };
 		E992F78125BE72BA0040AD0C /* EAccountApiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EAccountApiSDK.framework; sourceTree = "<group>"; };
 		E992F78225BE72BA0040AD0C /* TYRZUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TYRZUISDK.framework; sourceTree = "<group>"; };
+		E9A2D5772797FB0900002EA3 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		E9E7784A2302CAFE002D91D1 /* OneLoginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OneLoginSDK.framework; sourceTree = "<group>"; };
 		E9E7784D2302CAFE002D91D1 /* OneLoginResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = OneLoginResource.bundle; sourceTree = "<group>"; };
 		E9F06AB625133D000017EB76 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A2D5782797FB0900002EA3 /* Network.framework in Frameworks */,
 				1CC98C5C2449B7CC00CE4312 /* MediaPlayer.framework in Frameworks */,
 				E992F78525BE72BB0040AD0C /* TYRZUISDK.framework in Frameworks */,
 				E93F576E230BE5EF009C54A2 /* CoreTelephony.framework in Frameworks */,
@@ -233,6 +236,7 @@
 		7A3F71DA2241D9D3007EA470 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9A2D5772797FB0900002EA3 /* Network.framework */,
 				1CC98C5B2449B7CC00CE4312 /* MediaPlayer.framework */,
 				E93F576D230BE5EF009C54A2 /* CoreTelephony.framework */,
 				7AF5595F2242290600230BE0 /* libc++.1.tbd */,
@@ -622,7 +626,7 @@
 					"$(PROJECT_DIR)/GT3Captcha",
 				);
 				INFOPLIST_FILE = OneLoginExample/Support/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,7 +655,7 @@
 					"$(PROJECT_DIR)/GT3Captcha",
 				);
 				INFOPLIST_FILE = OneLoginExample/Support/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

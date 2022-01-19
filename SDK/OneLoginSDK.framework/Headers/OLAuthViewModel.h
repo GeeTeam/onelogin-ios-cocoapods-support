@@ -178,6 +178,16 @@ typedef NS_ENUM(NSInteger, OLPullAuthVCStyle) {
     OLPullAuthVCStylePush
 };
 
+
+/**
+ * @abstract 未勾选授权页隐私协议前的勾选框，点击登录按钮时 协议与隐私框的抖动样式
+ */
+typedef NS_ENUM(NSInteger, OLNotCheckProtocolShakeStyle) {
+    OLNotCheckProtocolShakeStyleNone = 0,
+    OLNotCheckProtocolShakeStyleHorizontal,
+    OLNotCheckProtocolShakeStyleVertical
+};
+
 @interface OLAuthViewModel : NSObject
 
 #pragma mark - Status Bar/状态栏
@@ -446,6 +456,11 @@ typedef NS_ENUM(NSInteger, OLPullAuthVCStyle) {
  * 未勾选授权页面隐私协议前勾选框时，点击授权页面登录按钮时提示 block
  */
 @property (nonatomic, copy) OLNotCheckProtocolHintBlock hintBlock;
+
+/**
+ * 未勾选授权页面隐私协议前勾选框时，点击授权页面登录按钮时勾选框与协议的抖动样式,默认不抖动
+ */
+@property(nonatomic,assign) OLNotCheckProtocolShakeStyle shakeStyle;
 
 /**
  * 勾选框与服务条款文案之间的间距。默认为 2

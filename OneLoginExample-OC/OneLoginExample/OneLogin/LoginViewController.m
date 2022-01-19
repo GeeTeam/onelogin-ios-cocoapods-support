@@ -144,6 +144,7 @@
     viewModel.sloganRect = sloganRect;
     
     // -------------- 服务条款设置 -------------------
+    viewModel.shakeStyle = OLNotCheckProtocolShakeStyleHorizontal;//设置服务条款水平抖动，默认不抖动
     viewModel.defaultCheckBoxState = YES; // 是否默认选择同意服务条款，默认同意
 //    viewModel.checkedImage = [UIImage imageNamed:@""]; // 复选框选中状态图片
 //    viewModel.uncheckedImage = [UIImage imageNamed:@""]; // 复选框未选中状态图片

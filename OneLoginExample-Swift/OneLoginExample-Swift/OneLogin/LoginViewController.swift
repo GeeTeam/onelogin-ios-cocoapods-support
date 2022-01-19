@@ -133,6 +133,7 @@ class LoginViewController: BaseViewController {
             
             // -------------- 服务条款设置 -------------------
             viewModel.defaultCheckBoxState = true
+            viewModel.shakeStyle = .none
             let checkBoxRect = OLRect(portraitTopYOffset: 0, portraitCenterXOffset: 0, portraitLeftXOffset: 0, landscapeTopYOffset: 0, landscapeCenterXOffset: 0, landscapeLeftXOffset: 0, size: CGSize(width: 12, height: 12)) // 复选框尺寸，默认为12*12
             viewModel.checkBoxRect = checkBoxRect
             
