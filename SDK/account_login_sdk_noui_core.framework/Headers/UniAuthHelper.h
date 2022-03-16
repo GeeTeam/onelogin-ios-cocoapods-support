@@ -21,6 +21,10 @@
 //                 未确保兼容性，建议讲wostore.cn  10010.com域名及其子域名加入到http通信白名单中。
 //                 解决不符合url规范的特殊url地址的socket网络访问bug
 //  5.1.0IR01B0712 删除缓存相关代码
+//  5.1.1IR01B0825 预取号请求的队列修改为并发队列。预取号请求日志添加开关控制。
+//  5.1.2IR01B0110 解决高并发预取号请求可能导致偶发的崩溃问题。（但不建议高并发调用预取号接口）
+//                 超时时间不在设置为全局变量，避免多线程相互影响
+
 
 #import <Foundation/Foundation.h>
 
@@ -59,7 +63,7 @@ typedef void (^UniResultListener)(NSDictionary * _Nonnull data);
 -(void) mobileAuth:(double)timeout listener:(UniResultListener _Nonnull) listener;
 
 /**
- 日志默认开启。正式发布时，可选择关闭。
+ 预取号日志开关。
  */
 -(void) printConsoleEnable:(BOOL)enable;
 

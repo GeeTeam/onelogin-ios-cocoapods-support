@@ -266,6 +266,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)setOperatorParams:(NSDictionary *)params;
 
+
+/// 仅私有化支持
+/// @param option 加密方式
++ (void)setAlgorithmOption:(OLAlgorithmOption)option;
+
 @end
 
 @protocol OneLoginDelegate <NSObject>

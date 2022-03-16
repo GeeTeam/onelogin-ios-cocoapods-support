@@ -16,6 +16,10 @@ typedef NS_ENUM(NSInteger, GOPPhoneNumEncryptOption) {
     GOPPhoneNumEncryptOptionSha256      // sha256
 };
 
+typedef NS_ENUM(NSInteger, GOPAlgorithmOption) {
+    GOPAlgorithmOptionAES2RSA = 0,   // AES+RSA
+    GOPAlgorithmOptionSM42SM2 = 1    // SM4+SM2
+};
 @protocol GOPManagerDelegate;
 
 typedef void(^GOPCompletion)(NSDictionary *dict);
@@ -117,6 +121,11 @@ typedef void(^GOPFailure)(NSError *error);
 + (NSString * _Nullable)getCachedPhone;
 + (void)getCachedPhoneWithCompletionHandler:(void(^)(NSString *phone))completionHandler;
 + (void)getCachedPhonesWithCompletionHandler:(void(^)(NSMutableArray<NSString *> *phones))completionHandler;
+
+/// 仅私有化支持
+/// @param option 加密方式
++ (void)setAlgorithmOption:(GOPAlgorithmOption)option;
+
 
 @end
 

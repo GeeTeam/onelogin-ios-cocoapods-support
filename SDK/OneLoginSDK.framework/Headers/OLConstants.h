@@ -46,6 +46,7 @@ static NSString * const OLSDKKey               = @"sdk";
 static NSString * const OLOpsaltKey            = @"opsalt";
 static NSString * const OLTimestampKey         = @"timestamp";
 static NSString * const OLSignKey              = @"sign";
+static NSString * const OLAlgorithmTypeKey     = @"alg";
 static NSString * const OLPreTokenTypeKey      = @"pre_token_type";
 static NSString * const OLApp_id               = @"app_id";
 static NSString * const OLCodeKey              = @"code";
@@ -62,6 +63,7 @@ static NSString * const OLErrorMsgKey          = @"error_msg";
 static NSString * const OLOperatorErrorCodeKey = @"operator_error_code";
 static NSString * const OLNIKey                = @"n_i";
 static NSString * const OLMobileBridgeTokenKey = @"mobile_bridge_token";
+static NSString * const OLCipherSaveKey        = @"com.geetest.onelogin.cipher";
 
 static NSString * const OLCaptchaIDKey         = @"captcha_id";
 static NSString * const OLCaptchaStatusKey     = @"captcha_status";
@@ -74,7 +76,7 @@ static NSString * const OLPreGetTokenSuccessedTimeKey = @"preGetTokenSuccessedTi
 
 static NSString * const OLZidKey               = @"com.geetest.zid";
 
-static NSString * const OLSDKVersion           = @"2.7.0";
+static NSString * const OLSDKVersion           = @"2.7.3";
 
 static NSString * const OLFirstRegister        = @"f_r_o";
 
@@ -121,6 +123,8 @@ static NSString * const OnePassURLPrefix       = @"https://onepass.geetest.com/v
 static NSString * const OnePassURLClientReport = @"clientreport";
 static NSString * const OnePassURLPreGetway    = @"pre_gateway";
 static NSString * const OnePassURLPreReport    = @"pre_report";
+
+static NSString * const OPCipherSaveKey        = @"com.geetest.onepass.cipher";
 
 static NSString * const OPErrorData            = @"error_data";
 static NSString * const OPErrorFailingURL      = @"GOPFailingURL";

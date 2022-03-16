@@ -11,6 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, OLAlgorithmOption) {
+    OLAlgorithmOptionAES2RSA = 0,   // AES+RSA
+    OLAlgorithmOptionSM42SM2 = 1    // SM4+SM2
+};
+
 /**
  * @abstract 授权登录页面自定义视图，customAreaView为授权页面的view，如，可将三方登录添加到授权登录页面
  */
