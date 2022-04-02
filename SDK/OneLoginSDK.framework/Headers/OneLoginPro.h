@@ -50,6 +50,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setRequestTimeout:(NSTimeInterval)timeout;
 
 /**
+ 分别设置预取号和取号请求超时时长。默认时长8s。
+
+ @param preGetTokenTimeout 预取号超时时长
+ @param requestTokenTimeout 取号超时时长
+ */
++ (void)setRequestTimeout:(NSTimeInterval)preGetTokenTimeout requestTokenTimeout:(NSTimeInterval)requestTokenTimeout;
+
+/**
  进行用户认证授权, 获取网关 token 。
  
  @discussion 调用限制说明
@@ -195,6 +203,12 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract 服务条款左边复选框是否勾选
  */
 + (BOOL)isProtocolCheckboxChecked;
+
+/**
+  @abstract 设置服务条款左边复选框勾选状态
+  @param isChecked 是否勾选
+ */
++ (void)setProtocolCheckState:(BOOL)isChecked;
 
 /**
  * @abstract 获取当前授权页面对应的配置

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<OLNavigationViewDelegate> delegate;
 
-- (void)updateText:(NSAttributedString *)text bgColor:(UIColor *)bgColor backBtnImage:(UIImage *)image control:(nullable UIView *)control;
+- (void)updateText:(NSAttributedString *)text edgeMargin:(double)edgeMargin bgColor:(UIColor *)bgColor backBtnImage:(UIImage *)image control:(nullable UIView *)control;
 
 - (void)updatePortraitConstraints:(OLRect)backButtonRect;
 - (void)updateLandscapeConstraints:(OLRect)backButtonRect;

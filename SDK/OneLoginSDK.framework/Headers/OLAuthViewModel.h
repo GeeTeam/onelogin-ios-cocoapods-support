@@ -16,6 +16,12 @@ typedef NS_ENUM(NSInteger, OLAlgorithmOption) {
     OLAlgorithmOptionSM42SM2 = 1    // SM4+SM2
 };
 
+typedef NS_ENUM(NSInteger, OLLanguageType) {
+    OLLanguageTypeSimplifiedChinese,  // 简体中文
+    OLLanguageTypeTraditionalChinese, // 繁体中文
+    OLLanguageTypeEnglish             // 英文
+};
+
 /**
  * @abstract 授权登录页面自定义视图，customAreaView为授权页面的view，如，可将三方登录添加到授权登录页面
  */
@@ -204,6 +210,10 @@ typedef NS_ENUM(NSInteger, OLNotCheckProtocolShakeStyle) {
 
 #pragma mark - Navigation/导航
 
+/**
+ 导航栏标题距离屏幕左边的间距。默认为36，隐私条款导航栏保持一致。
+ */
+@property (nonatomic, assign) double navTextPadding;
 /**
  授权页导航的标题。默认为空字符串。
  */
@@ -472,6 +482,12 @@ typedef NS_ENUM(NSInteger, OLNotCheckProtocolShakeStyle) {
  */
 @property (nonatomic, assign) CGFloat spaceBetweenCheckboxAndTermsText;
 
+#pragma mark - 授权页文案多语言配置
+/**
+ * 多语言配置，支持中文简体，中文繁体，英文
+ */
+@property (nonatomic, assign) OLLanguageType languageType;
+
 #pragma mark - Custom Area/自定义区域
 
 /**
@@ -505,6 +521,17 @@ typedef NS_ENUM(NSInteger, OLNotCheckProtocolShakeStyle) {
  横屏模式授权页面背景图片
  */
 @property (nullable, nonatomic, strong) UIImage *landscapeBackgroundImage;
+
+#pragma mark - Background Gif/授权页面背景 gif
+/**
+ 授权页面背景Gif路径，与背景图片、视频，三者只有一个有效，视频优先级最高，背景图其次，gif 最后
+ */
+@property (nullable, nonatomic, strong) NSString *backgroundGifPath;
+#pragma mark - Background Video/授权页面背景视频
+/**
+ 授权页面背景视频路径，可支持本地和网络视频，与背景图片、gif，三者只有一个有效，视频优先级最高，背景图其次，gif 最后
+ */
+@property (nullable, nonatomic, strong) NSString *backgroundVideoPath;
 
 #pragma mark - Autolayout
 

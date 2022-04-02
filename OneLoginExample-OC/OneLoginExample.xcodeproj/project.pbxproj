@@ -45,7 +45,7 @@
 		E992F78325BE72BA0040AD0C /* account_login_sdk_noui_core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E992F78025BE72BA0040AD0C /* account_login_sdk_noui_core.framework */; };
 		E992F78425BE72BB0040AD0C /* EAccountApiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E992F78125BE72BA0040AD0C /* EAccountApiSDK.framework */; };
 		E992F78525BE72BB0040AD0C /* TYRZUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E992F78225BE72BA0040AD0C /* TYRZUISDK.framework */; };
-		E9A2D5782797FB0900002EA3 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A2D5772797FB0900002EA3 /* Network.framework */; };
+		E9A2D5782797FB0900002EA3 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A2D5772797FB0900002EA3 /* Network.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E9E778502302CAFE002D91D1 /* OneLoginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E7784A2302CAFE002D91D1 /* OneLoginSDK.framework */; };
 		E9E778532302CAFE002D91D1 /* OneLoginResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9E7784D2302CAFE002D91D1 /* OneLoginResource.bundle */; };
 		E9F06ABA25133D000017EB76 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F06AB725133D000017EB76 /* BaseViewController.m */; };
