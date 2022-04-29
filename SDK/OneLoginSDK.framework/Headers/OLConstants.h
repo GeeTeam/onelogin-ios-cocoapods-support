@@ -76,7 +76,7 @@ static NSString * const OLPreGetTokenSuccessedTimeKey = @"preGetTokenSuccessedTi
 
 static NSString * const OLZidKey               = @"com.geetest.zid";
 
-static NSString * const OLSDKVersion           = @"2.7.4";
+static NSString * const OLSDKVersion           = @"2.7.5";
 
 static NSString * const OLFirstRegister        = @"f_r_o";
 
