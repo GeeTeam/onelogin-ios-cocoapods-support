@@ -96,6 +96,20 @@ typedef struct OLRect {
     CGSize size;
 } OLRect;
 
+CG_INLINE OLRect OLRectMake(CGFloat portraitTopYOffset, CGFloat portraitCenterXOffset, CGFloat portraitLeftXOffset, CGFloat landscapeTopYOffset, CGFloat landscapeCenterXOffset, CGFloat landscapeLeftXOffset, CGSize size) {
+    OLRect rect;
+    rect.portraitTopYOffset = portraitTopYOffset;
+    rect.portraitCenterXOffset = portraitCenterXOffset;
+    rect.portraitLeftXOffset = portraitLeftXOffset;
+    rect.landscapeTopYOffset = landscapeTopYOffset;
+    rect.landscapeCenterXOffset = landscapeCenterXOffset;
+    rect.landscapeLeftXOffset = landscapeLeftXOffset;
+    rect.size = size;
+    return rect;
+}
+
+CG_EXTERN const OLRect OLRectZero;
+
 /**
  * @abstract 弹窗模式时支持的动画类型
  */
