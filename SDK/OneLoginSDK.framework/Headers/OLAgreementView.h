@@ -23,6 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
   auxiliaryPrivacyWords:(NSArray<NSString *> *)auxiliaryPrivacyWords
           textAlignment:(NSTextAlignment)textAlignment;
 
+- (void)updateTermItems:(NSArray<OLPrivacyTermItem *> *)termItems
+          withTextColor:(UIColor *)textColor
+              termsAttr:(NSDictionary<NSAttributedStringKey, id> *)termsAttr
+  auxiliaryPrivacyWords:(NSArray<NSString *> *)auxiliaryPrivacyWords
+          textAlignment:(NSTextAlignment)textAlignment
+                   font:(UIFont *)font;
+
 @end
 
 @protocol OLAgreementViewDelegate <NSObject>

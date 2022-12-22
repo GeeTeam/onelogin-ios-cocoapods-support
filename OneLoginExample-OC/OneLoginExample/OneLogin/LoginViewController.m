@@ -144,7 +144,6 @@
     viewModel.sloganRect = sloganRect;
     
     // -------------- 服务条款设置 -------------------
-    viewModel.shakeStyle = OLNotCheckProtocolShakeStyleHorizontal;//设置服务条款水平抖动，默认不抖动
     viewModel.defaultCheckBoxState = YES; // 是否默认选择同意服务条款，默认同意
 //    viewModel.checkedImage = [UIImage imageNamed:@""]; // 复选框选中状态图片
 //    viewModel.uncheckedImage = [UIImage imageNamed:@""]; // 复选框未选中状态图片
@@ -520,6 +519,49 @@
         [wself finishRequestingToken:result];
         sender.enabled = YES;
     }];
+
+// 授权弹窗
+#ifdef OLUseAuthDialog
+    // 是否显示授权弹窗，不显示的话在未授权时会弹出请同意服务条款提示
+    viewModel.willAuthDialogDisplay = YES;
+    // 弹窗是否显示在底部，为 NO 时弹窗会在屏幕中间显示
+    viewModel.isAuthDialogBottom = YES;
+    // 弹窗尺寸、圆角大小及位置
+    OLRect authDialogRect = {0, 0, 0, 0, 0, 0, {[self ol_screenWidth], 340}};
+    viewModel.authDialogRect = authDialogRect;
+    viewModel.authDialogCornerRadius = 8;
+    viewModel.authDialogRectCorners = @[@(UIRectCornerTopLeft), @(UIRectCornerTopRight)];
+    
+    // 弹窗动画
+    viewModel.authDialogAnimationStyle = OLAuthDialogAnimationStyleCoverVertical;
+    
+    // 弹窗标题、内容设置
+    viewModel.authDialogTitleFont = [UIFont systemFontOfSize:20];
+    viewModel.authDialogTitleText = @"请同意下述服务条款";
+    viewModel.authDialogTitleColor = [UIColor blackColor];
+    viewModel.authDialogContentFont = [UIFont systemFontOfSize:14];
+    
+    // 同意按钮设置
+    viewModel.authDialogAgreeBtnFont = [UIFont systemFontOfSize:16];
+    viewModel.authDialogAgreeBtnText = @"同意并继续";
+    viewModel.authDialogAgreeBtnColor = [UIColor whiteColor];
+    
+    // 不同意按钮设置
+    viewModel.authDialogDisagreeBtnFont = [UIFont systemFontOfSize:16];
+    viewModel.authDialogDisagreeBtnText = @"不同意并返回";
+    viewModel.authDialogDisagreeBtnColor = [UIColor blackColor];
+    
+    // 是否可以点击弹窗外区域关闭弹窗，默认为 YES
+    viewModel.canCloseAuthDialogFromTapGesture = NO;
+    // 点击弹窗外区域关闭弹窗的回调
+    viewModel.tapAuthDialogBackgroundBlock = ^{
+        NSLog(@"tapAuthDialogBackgroundBlock");
+    };
+    // 点击不同意按钮关闭弹窗的回调
+    viewModel.clickAuthDialogDisagreeBtnBlock = ^{
+        NSLog(@"clickAuthDialogDisagreeBtnBlock");
+    };
+#endif // OLUseAuthDialog
 }
 
 - (IBAction)landscapeLogin:(UIButton *)sender {

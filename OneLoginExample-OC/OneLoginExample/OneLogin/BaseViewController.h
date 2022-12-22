@@ -23,6 +23,7 @@
 
 #define NeedCustomAuthUI
 #define OLAuthVCAutoLayout
+#define OLUseAuthDialog
 
 NS_ASSUME_NONNULL_BEGIN
 

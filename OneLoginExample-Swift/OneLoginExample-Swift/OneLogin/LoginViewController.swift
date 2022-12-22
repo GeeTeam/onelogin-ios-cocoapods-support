@@ -133,7 +133,6 @@ class LoginViewController: BaseViewController {
             
             // -------------- 服务条款设置 -------------------
             viewModel.defaultCheckBoxState = true
-            viewModel.shakeStyle = .none
             let checkBoxRect = OLRect(portraitTopYOffset: 0, portraitCenterXOffset: 0, portraitLeftXOffset: 0, landscapeTopYOffset: 0, landscapeCenterXOffset: 0, landscapeLeftXOffset: 0, size: CGSize(width: 12, height: 12)) // 复选框尺寸，默认为12*12
             viewModel.checkBoxRect = checkBoxRect
             
@@ -223,6 +222,45 @@ class LoginViewController: BaseViewController {
             
             // -------------- 进入授权页面的方式 -------------------
             viewModel.pullAuthVCStyle = OLPullAuthVCStyle.push // 默认为 modal
+            
+            // -------------- 授权弹窗设置 -------------------
+            // 是否显示授权弹窗，不显示的话在未授权时会弹出请同意服务条款提示
+            viewModel.willAuthDialogDisplay = true
+            // 弹窗是否显示在底部，为 NO 时弹窗会在屏幕中间显示
+            viewModel.isAuthDialogBottom = true
+            // 弹窗尺寸、圆角大小及位置
+            viewModel.authDialogRect = OLRect(portraitTopYOffset: 0, portraitCenterXOffset: 0, portraitLeftXOffset: 0, landscapeTopYOffset: 0, landscapeCenterXOffset: 0, landscapeLeftXOffset: 0, size: CGSize(width: UIScreen.main.bounds.size.width, height: 34))
+            viewModel.authDialogCornerRadius = 8
+            viewModel.authDialogRectCorners = [NSNumber.init(value: UIRectCorner.topLeft.rawValue), NSNumber.init(value: UIRectCorner.topRight.rawValue)]
+            
+            // 弹窗动画
+            viewModel.authDialogAnimationStyle = .coverVertical
+            
+            // 弹窗标题、内容设置
+            viewModel.authDialogTitleFont = UIFont.systemFont(ofSize: 20)
+            viewModel.authDialogTitleText = "请同意下述服务条款"
+            viewModel.authDialogTitleColor = UIColor.black
+            viewModel.authDialogContentFont = UIFont.systemFont(ofSize: 14)
+            
+            // 同意按钮设置
+            viewModel.authDialogAgreeBtnFont = UIFont.systemFont(ofSize: 16)
+            viewModel.authDialogAgreeBtnText = "同意并继续"
+            viewModel.authDialogAgreeBtnColor = UIColor.white
+            
+            // 不同意按钮设置
+            viewModel.authDialogAgreeBtnFont = UIFont.systemFont(ofSize: 16)
+            viewModel.authDialogAgreeBtnText = "不同意并返回"
+            viewModel.authDialogAgreeBtnColor = UIColor.black
+            
+            // 是否可以点击弹窗外区域关闭弹窗，默认为 true
+            viewModel.canCloseAuthDialogFromTapGesture = false;
+            viewModel.tapAuthDialogBackgroundBlock = {
+                print("tapAuthDialogBackgroundBlock")
+            }
+            // 点击不同意按钮关闭弹窗的回调
+            viewModel.clickAuthDialogDisagreeBtnBlock = {
+                print("clickAuthDialogDisagreeBtnBlock")
+            }
             
             // -------------- Autolayout -------------------
             if OLAuthVCAutoLayout {
@@ -438,7 +476,7 @@ class LoginViewController: BaseViewController {
         }
         
         // 弹窗模式，请传 navigationController
-        OneLoginPro.requestToken(with: self.navigationController, viewModel: viewModel) { [weak self] result in
+        OneLoginPro.requestToken(with: self.navigationController!, viewModel: viewModel) { [weak self] result in
             if let strongSelf = self {
                 strongSelf.finishRequsetingToken(result: result!)
             }
@@ -499,7 +537,7 @@ class LoginViewController: BaseViewController {
         }
         
         // 弹窗模式，请传 navigationController
-        OneLoginPro.requestToken(with: self.navigationController, viewModel: viewModel) { [weak self] result in
+        OneLoginPro.requestToken(with: self.navigationController!, viewModel: viewModel) { [weak self] result in
             if let strongSelf = self {
                 strongSelf.finishRequsetingToken(result: result!)
             }
@@ -532,7 +570,7 @@ class LoginViewController: BaseViewController {
         }
         
         // 当用户传入的 viewController 的 navigationController 不为 nil 时，屏幕旋转方向由用户的 UINavigationController 来控制，故此处 controller 需传入 navigationController，否则无法控制屏幕旋转方向
-        OneLoginPro.requestToken(with: self.navigationController, viewModel: viewModel) { [weak self] result in
+        OneLoginPro.requestToken(with: self.navigationController!, viewModel: viewModel) { [weak self] result in
             if let strongSelf = self {
                 strongSelf.finishRequsetingToken(result: result!)
             }
