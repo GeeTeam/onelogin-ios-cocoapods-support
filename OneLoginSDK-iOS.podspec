@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://www.geetest.com'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Geetest' => 'develop@geetest.com' }
-  s.source = { :git => 'https://github.com/GeeTeam/onelogin-ios-cocoapods-support', :tag => s.version.to_s, :submodules => true } 
+  s.source = { :git => 'https://github.com/GeeTeam/onelogin-ios-cocoapods-support.git', :tag => s.version.to_s, :submodules => true } 
   s.ios.deployment_target = '8.0'
 
   s.frameworks = 'CFNetwork', 'CoreTelephony', 'Foundation', 'SystemConfiguration', 'UIKit'
