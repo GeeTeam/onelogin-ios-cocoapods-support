@@ -47,6 +47,7 @@ static NSString * const OLOpsaltKey            = @"opsalt";
 static NSString * const OLTimestampKey         = @"timestamp";
 static NSString * const OLSignKey              = @"sign";
 static NSString * const OLAlgorithmTypeKey     = @"alg";
+static NSString * const OLGetConfigNoUIKey     = @"nu";
 static NSString * const OLPreTokenTypeKey      = @"pre_token_type";
 static NSString * const OLApp_id               = @"app_id";
 static NSString * const OLCodeKey              = @"code";
@@ -76,7 +77,7 @@ static NSString * const OLPreGetTokenSuccessedTimeKey = @"preGetTokenSuccessedTi
 
 static NSString * const OLZidKey               = @"com.geetest.zid";
 
-static NSString * const OLSDKVersion           = @"2.7.8";
+static NSString * const OLSDKVersion           = @"2.8.0-alpha02-xcframework";
 
 static NSString * const OLFirstRegister        = @"f_r_o";
 
