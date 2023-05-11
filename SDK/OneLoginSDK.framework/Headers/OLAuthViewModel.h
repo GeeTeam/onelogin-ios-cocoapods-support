@@ -157,6 +157,11 @@ typedef void(^OLAuthViewLifeCycleBlock)(NSString *viewLifeCycle, BOOL animated);
 typedef void(^OLClickAuthButtonBlock)(void);
 
 /**
+ * 未勾选隐私条款时点击授权页面登录按钮的回调, 可用于自定义授权弹窗. 当返回 YES 时, 可以在 block 中添加自定义操作
+ */
+typedef BOOL(^OLCustomDisabledAuthActionBlock)(void);
+
+/**
  * 是否自定义授权页面登录按钮点击事件，用于完全接管授权页面点击事件，当返回 YES 时，可以在 block 中添加自定义操作
  */
 typedef BOOL(^OLCustomAuthActionBlock)(void);
@@ -395,6 +400,11 @@ typedef NS_ENUM(NSInteger, OLNotCheckProtocolShakeStyle) {
  * 点击授权页面授权按钮的回调，用于监听授权页面登录按钮的点击
  */
 @property (nullable, nonatomic, copy) OLClickAuthButtonBlock clickAuthButtonBlock;
+
+/**
+ * 未勾选隐私条款时点击授权页面登录按钮的回调, 可用于自定义授权弹窗. 当返回 YES 时, 可以在 block 中添加自定义操作
+ */
+@property (nullable, nonatomic, copy) OLCustomDisabledAuthActionBlock customDisabledAuthActionBlock;
 
 /**
  * 自定义授权页面登录按钮点击事件，用于完全接管授权页面点击事件，当返回 YES 时，可以在 block 中添加自定义操作
