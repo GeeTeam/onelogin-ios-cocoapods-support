@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'OneLoginSDK-iOS'
-  s.version = '2.8.3' 
+  s.version = '2.8.4' 
   s.summary = '极验一键登录SDK'
   s.homepage = 'https://www.geetest.com'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
